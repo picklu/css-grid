@@ -4,38 +4,65 @@
     box-sizing: border-box;
 }
 
-.box {
-    display: flex;
-    justify-content: center;
+.grid {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50px repeat(3, 1fr) 50px;
+    grid-template-areas:
+        "hcn flp flp flp flp dtl"
+        "mar chr chr chr chr mdt"
+        "mar chr chr chr chr mdt"
+        "mar tfe tfe tfe tfe mdt"
+        "ftr ftr ftr ftr ftr ftr";
+}
+
+.hardware-conn {
+    background-color: lightblue;
+    grid-area: hcn;
+}
+
+.file-path {
+    background-color: lightcoral;
+    grid-area: flp;
+}
+
+.data-loader {
+    background-color: lightgreen;
+    grid-area: dtl;
+}
+
+.method-params {
+    background-color: rgb(32, 178, 44);
+    grid-area: mar;
+}
+
+.chart {
+    background-color: lightsalmon;
+    grid-area: chr;
+}
+
+.meta-data {
+    background-color: rgb(166, 173, 173);
+    grid-area: mdt;
+}
+
+.tmp-file-exp {
+    background-color: lightcyan;
+    grid-area: tfe;
+}
+
+.footer {
+    background-color: rgb(14, 119, 87);
+    grid-area: ftr;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    ;
     align-items: center;
 }
 
-.box-1 {
-    background-color: lightcoral;
-}
-.box-2 {
-    background-color: lightblue;
-}
-.box-3 {
-    background-color: lightgreen;
-}
-
-.grid {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "box1 box2"
-        "box3 box3";
-}
-
-.box-1 {
-    grid-area: box1;
-}
-.box-2 {
-    grid-area: box2;
-}
-.box-3 {
-    grid-area: box3;
+.copy {
+    grid-column: 3/5;
+    justify-self: center;
 }
