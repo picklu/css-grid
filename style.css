@@ -5,17 +5,38 @@
 }
 
 .grid {
+    background-color: darkgrey;
     height: 100vh;
-    width: 100vw;
+    width: 100vw ;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 50px repeat(3, 1fr) 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px repeat(8, 1fr) 50px;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
     grid-template-areas:
-        "hcn flp flp flp flp dtl"
-        "mar chr chr chr chr mdt"
-        "mar chr chr chr chr mdt"
-        "mar tfe tfe tfe tfe mdt"
-        "ftr ftr ftr ftr ftr ftr";
+    "hcn dtl flp flp"
+    "chr chr chr chr"
+    "chr chr chr chr"
+    "chr chr chr chr"
+    "chr chr chr chr"
+    "mar mar mar mar"
+    "mar mar mar mar"
+    "mdt mdt mdt mdt"
+    "tfe tfe tfe tfe"
+    "ftr ftr ftr ftr";
+}
+
+.footer {
+    background-color: rgb(14, 119, 87);
+    grid-area: ftr;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+.copy {
+    grid-column: 2/4;
+    justify-self: center;
 }
 
 .hardware-conn {
@@ -44,7 +65,7 @@
 }
 
 .meta-data {
-    background-color: rgb(166, 173, 173);
+    background-color: rgb(87, 228, 228);
     grid-area: mdt;
 }
 
@@ -53,16 +74,44 @@
     grid-area: tfe;
 }
 
-.footer {
-    background-color: rgb(14, 119, 87);
-    grid-area: ftr;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    ;
-    align-items: center;
+@media only screen and (min-width: 992px) {
+
+    .grid {
+        grid-template-rows: 50px repeat(7, 1fr) 50px;
+        grid-template-areas:
+        "hcn flp flp dtl"
+        "mar chr chr chr"
+        "mar chr chr chr"
+        "mar chr chr chr"
+        "mar tfe tfe tfe"
+        "mar tfe tfe tfe"
+        "mar mdt mdt mdt"
+        "mar mdt mdt mdt"
+        "ftr ftr ftr ftr";
+    }
 }
 
-.copy {
-    grid-column: 3/5;
-    justify-self: center;
+@media only screen and (min-width: 1200px) {
+      
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 50px repeat(3, 1fr) 50px;
+        grid-template-areas:
+        "hcn flp flp flp flp dtl"
+        "mar chr chr chr chr mdt"
+        "mar chr chr chr chr mdt"
+        "mar tfe tfe tfe tfe mdt"
+        "ftr ftr ftr ftr ftr ftr";
+    }
+
+        
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+        
+    .copy {
+        grid-column: 3/5;
+        justify-self: center;
+    }
 }
