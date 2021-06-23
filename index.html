@@ -11,15 +11,25 @@
 
     <body>
         <div class="grid">
-            <div class="serial-comm">Hardware Connection</div>
-            <div class="file-path">File Path</div>
-            <div class="data-load">Data Loader</div>
-            <div class="method-param">Method Params</div>
-            <div class="chart-window">Chart</div>
-            <div class="meta-data">Meta Data</div>
-            <div class="temporary-file">Temporary Files</div>
+            <div class="grid__cell serial-comm">
+                <div class="serial-comm__connection">
+                    <button id="connect"
+                        class="btn serial-comm__connection serial-comm__connection--disconnected">Connect</button>
+                    <select name="ports" class="serial-comm__options" id="ports">
+                        <option class="option serial-comm__option serial-comm__option--selected">COMX</option>
+                        <!-- dummy port -->
+                        <!-- more options will be added programmatically -->
+                    </select>
+                </div>
+            </div>
+            <div class="grid__cell file-path">File Path</div>
+            <div class="grid__cell data-load">Data Loader</div>
+            <div class="grid__cell method-param">Method Params</div>
+            <div class="grid__cell chart-window">Chart</div>
+            <div class="grid__cell meta-data">Meta Data</div>
+            <div class="grid__cell temporary-file">Temporary Files</div>
 
-            <footer class="footer">
+            <footer class=" grid__cell footer">
                 <div class="status">Status: <span class="status-message"></span></div>
                 <small class="copy">&copy Subrata Sarker</small>
             </footer>
