@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  background-color: darkgrey;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px repeat(8, 1fr) 50px;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  grid-template-areas: "hcn dtl flp flp" "chr chr chr chr" "chr chr chr chr" "chr chr chr chr" "chr chr chr chr" "mar mar mar mar" "mar mar mar mar" "mdt mdt mdt mdt" "tfe tfe tfe tfe" "ftr ftr ftr ftr";
+}
+
+.footer {
+  background-color: #0e7757;
+  grid-area: ftr;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+.copy {
+  grid-column: 2/4;
+  justify-self: center;
+}
+
+.serial-comm {
+  background-color: #1e9bc5;
+  grid-area: hcn;
+}
+
+.file-path {
+  background-color: lightcoral;
+  grid-area: flp;
+}
+
+.data-load {
+  background-color: lightgreen;
+  grid-area: dtl;
+}
+
+.method-param {
+  background-color: #20b22c;
+  grid-area: mar;
+}
+
+.chart-window {
+  background-color: lightsalmon;
+  grid-area: chr;
+}
+
+.meta-data {
+  background-color: #57e4e4;
+  grid-area: mdt;
+}
+
+.temporay-file {
+  background-color: lightcyan;
+  grid-area: tfe;
+}
+
+@media only screen and (min-width: 992px) {
+  .grid {
+    grid-template-rows: 50px repeat(7, 1fr) 50px;
+    grid-template-areas: "hcn flp flp dtl" "mar chr chr chr" "mar chr chr chr" "mar chr chr chr" "mar tfe tfe tfe" "mar tfe tfe tfe" "mar mdt mdt mdt" "mar mdt mdt mdt" "ftr ftr ftr ftr";
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50px repeat(3, 1fr) 50px;
+    grid-template-areas: "hcn flp flp flp flp dtl" "mar chr chr chr chr mdt" "mar chr chr chr chr mdt" "mar tfe tfe tfe tfe mdt" "ftr ftr ftr ftr ftr ftr";
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .copy {
+    grid-column: 3/5;
+    justify-self: center;
+  }
+}
