@@ -11,9 +11,9 @@
 
     <body>
         <div class="grid">
-            <div class=" grid__cell communication-serial">
-                <button id="connect" class="btn connection disconnected">Connect</button>
-                <select name="ports" class="ports" id="ports">
+            <div class=" grid__cell serial-comm">
+                <button id="connect" class="btn serial-comm__connect disconnected">Connect</button>
+                <select name="ports" class="options serial-comm__ports" id="ports">
                     <option>COMX</option><!-- dummy port -->
                 </select>
             </div>
@@ -26,7 +26,7 @@
 
             <footer class="footer">
                 <div class="status">Status: <span class="status-message"></span></div>
-                <small class="copy">&copy Subrata Sarker</small>
+                <small class="copy">&copy Subrata Sarker 2021</small>
             </footer>
         </div>
     </body>
