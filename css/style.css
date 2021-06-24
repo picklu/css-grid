@@ -144,14 +144,20 @@ table {
   padding: 5px;
 }
 
-.grid .serial-comm,
-.grid .method-param {
+.grid .serial-comm {
   display: grid;
   grid-template-columns: 5fr 3fr;
   grid-column-gap: 3px;
 }
 
-.btn {
+.grid .method-param .params_form {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: auto;
+}
+
+.btn,
+.label {
   outline: none;
   background-color: #a5a8a8;
   color: #080808;

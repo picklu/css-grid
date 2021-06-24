@@ -15,15 +15,25 @@
         padding: $padding-secondary;
     }
 
-    .serial-comm,
-    .method-param {
+    .serial-comm {
         display: grid;
         grid-template-columns: 5fr 3fr;
         grid-column-gap: $border-width-secondary;
     }
+
+    .method-param {
+        .params_form{
+            display: grid;
+            grid-template-columns: 5fr 3fr;
+            grid-template-rows: auto;
+
+            
+        }
+    }
 }
 
-.btn {
+.btn,
+.label {
     outline: none;
     background-color: $grey-secondary;
     color: $black-primary;

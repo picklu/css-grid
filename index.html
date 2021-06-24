@@ -11,6 +11,7 @@
 
     <body>
         <div class="grid">
+            <!-- serial-comnmunication -->
             <div class=" grid__cell serial-comm">
                 <button id="connect" class="btn serial-comm__connect disconnected">Connect</button>
                 <select name="ports" class="options serial-comm__ports" id="ports">
@@ -19,14 +20,72 @@
             </div>
             <div class="grid__cell file-path">File Path</div>
             <div class="grid__cell data-load">Data Loader</div>
-            <div class="grid__cell method-param">Method Params</div>
+            <div class="grid__cell method-param">
+                <form class="params__form" id="params" method="GET" action="#">
+                    <div class="params__method__input active">
+                        <label for="method">Method</label>
+                        <select name="method" id="method" class="method">
+                            <option value="cv">CV</option>
+                            <option value="lsv" selected>LSV</option>
+                        </select>
+                    </div>
+                    <div class="params__method__input active">
+                        <label for="maxcurrent">Current Limit</label>
+                        <select name="maxcurrent" id="maxcurrent" class="maxcurrent xydomain">
+                            <option value="5">5 &micro;A</option>
+                            <option value="10">10 &micro;A</option>
+                            <option value="50">50 &micro;A</option>
+                            <option value="100">100 &micro;A</option>
+                            <option value="150">150 &micro;A</option>
+                            <option value="200" selected>200 &micro;A</option>
+                            <option value="250">250 &micro;A</option>
+                            <option value="500">500 &micro;A</option>
+                            <option value="750">750 &micro;A</option>
+                            <option value="1000">1 mA</option>
+                        </select>
+                    </div>
+
+                    <div class="params__form__input active common">
+                        <label for="estart">E Start (V)</label>
+                        <input name="estart" id="estart" class="estart voltage-limit  xydomain" type="number" step="0.1"
+                            value="-1.0" min="-1.0" max="1.0" required>
+                    </div>
+                    <div class="params__form__input active common">
+                        <label for="estop">E Stop (V)</label>
+                        <input name="estop" id="estop" class="estop voltage-limit  xydomain" type="number" step="0.1"
+                            value="1.0" min="-1.0" max="1.0" required>
+                    </div>
+                    <div class="params__form__input active common">
+                        <label for="estep">E Step (mV)</label>
+                        <input name="estep" id="estep" class="estep" type="number" value="2" min="1" max="100" required>
+                    </div>
+                    <div class="params__form__input active common">
+                        <label for="scanrate">Scan Rate (mV/s)</label>
+                        <input name="scanrate" id="scanrate" class="scanrate" type="number" step="5" value="100" min="5"
+                            max="500" required>
+                    </div>
+                    <div class="params__form__input inactive">
+                        <label for="ncycles">N Cycles</label>
+                        <input name="ncycles" id="ncycles" class="ncycles" type="number" step="1" value="1" min="1"
+                            max="100" required>
+                    </div>
+                    <div class="params__form__input active common">
+                        <label for="equilibrationtime">Equilibration Time (s)</label>
+                        <input name="equilibrationtime" id="equilibrationtime" class="equilibrationtime" type="number"
+                            step="1" value="5" min="0" max="60" required>
+                    </div>
+                    <div class="params__form__btn">
+                        <button class="btn sweep start-sweep" id="sweep" disabled>Disconnected</button>
+                    </div>
+                </form>
+            </div>
             <div class="grid__cell chart-window">Chart</div>
             <div class="grid__cell meta-data">Meta Data</div>
             <div class="grid__cell temporary-file">Temporary Files</div>
 
             <footer class="footer">
                 <div class="status">Status: <span class="status-message"></span></div>
-                <small class="copy">&copy Subrata Sarker 2021</small>
+                <small class="copy">&copy; Subrata Sarker 2021</small>
             </footer>
         </div>
     </body>
