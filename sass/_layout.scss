@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* grid layout */
+.grid {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px repeat(8, 1fr) 50px;
+    grid-template-areas:
+        "hcn dtl flp flp"
+        "chr chr chr chr"
+        "chr chr chr chr"
+        "chr chr chr chr"
+        "chr chr chr chr"
+        "mar mar mar mar"
+        "mar mar mar mar"
+        "mdt mdt mdt mdt"
+        "tfe tfe tfe tfe"
+        "ftr ftr ftr ftr";
+
+        @media only screen and (min-width: 992px) {
+
+            grid-template-rows: 50px repeat(7, 1fr) 50px;
+            grid-template-areas:
+                "hcn flp flp dtl"
+                "mar chr chr chr"
+                "mar chr chr chr"
+                "mar chr chr chr"
+                "mar tfe tfe tfe"
+                "mar tfe tfe tfe"
+                "mar mdt mdt mdt"
+                "mar mdt mdt mdt"
+                "ftr ftr ftr ftr";
+        }
+
+        @media only screen and (min-width: 1200px) {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 50px repeat(3, 1fr) 50px;
+            grid-template-areas:
+                "hcn flp flp flp flp dtl"
+                "mar chr chr chr chr mdt"
+                "mar chr chr chr chr mdt"
+                "mar tfe tfe tfe tfe mdt"
+                "ftr ftr ftr ftr ftr ftr";
+        }
+        
+}
+
+.serial-comm {
+    grid-area: hcn;
+}
+
+.file-path {
+    grid-area: flp;
+}
+
+.data-load {
+    grid-area: dtl;
+}
+
+.method-param {
+    grid-area: mar;
+}
+
+.chart-window {
+    grid-area: chr;
+}
+
+.meta-data {
+    grid-area: mdt;
+}
+
+.temporary-file {
+    grid-area: tfe;
+}
+
+
+.footer {
+    background-color: rgb(13, 69, 94);
+    color: azure;
+    grid-area: ftr;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+
+    @media only screen and (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.copy {
+    grid-column: 2/4;
+    justify-self: center;
+
+    @media screen and (min-width: 1200px) {
+        grid-column: 3/5;
+    }
+}

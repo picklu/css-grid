@@ -1,117 +1,64 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@charset "utf-8";
+
+@import "variables";
+@import "reset";
+@import "layout";
 
 .grid {
-    background-color: darkgrey;
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 50px repeat(8, 1fr) 50px;
-    grid-column-gap: 1px;
-    grid-row-gap: 1px;
-    grid-template-areas:
-        "hcn dtl flp flp"
-        "chr chr chr chr"
-        "chr chr chr chr"
-        "chr chr chr chr"
-        "chr chr chr chr"
-        "mar mar mar mar"
-        "mar mar mar mar"
-        "mdt mdt mdt mdt"
-        "tfe tfe tfe tfe"
-        "ftr ftr ftr ftr";
+    background-color:#9c9999;
+    border: 5px double #959595;
+
+    &__cell {
+        background-color: #cbcccc;
+        border: 5px double #7e7c7c;
+
+    }
 }
 
-.footer {
-    background-color: rgb(14, 119, 87);
-    grid-area: ftr;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-}
-
-.copy {
-    grid-column: 2/4;
-    justify-self: center;
-}
 
 .serial-comm {
-    background-color: #1e9bc5;
-    grid-area: hcn;
-}
-
-.file-path {
-    background-color: lightcoral;
-    grid-area: flp;
-}
-
-.data-load {
-    background-color: lightgreen;
-    grid-area: dtl;
-}
-
-.method-param {
-    background-color: rgb(32, 178, 44);
-    grid-area: mar;
-}
-
-.chart-window {
-    background-color: lightsalmon;
-    grid-area: chr;
-}
-
-.meta-data {
-    background-color: rgb(87, 228, 228);
-    grid-area: mdt;
-}
-
-.temporay-file {
-    background-color: lightcyan;
-    grid-area: tfe;
-}
-
-@media only screen and (min-width: 992px) {
-
-    .grid {
-        grid-template-rows: 50px repeat(7, 1fr) 50px;
-        grid-template-areas:
-            "hcn flp flp dtl"
-            "mar chr chr chr"
-            "mar chr chr chr"
-            "mar chr chr chr"
-            "mar tfe tfe tfe"
-            "mar tfe tfe tfe"
-            "mar mdt mdt mdt"
-            "mar mdt mdt mdt"
-            "ftr ftr ftr ftr";
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-
-    .grid {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 50px repeat(3, 1fr) 50px;
-        grid-template-areas:
-            "hcn flp flp flp flp dtl"
-            "mar chr chr chr chr mdt"
-            "mar chr chr chr chr mdt"
-            "mar tfe tfe tfe tfe mdt"
-            "ftr ftr ftr ftr ftr ftr";
-    }
-
-
-    .footer {
+    height: 100%;
+    width: 100%;
+    
+    &__connection {
+        height: 100%;
+        width: 100%;
+        padding: 5px;
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-    }
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+        grid-template-columns: 3fr 1fr;
+        justify-content: center;
+        align-items: center;
 
-    .copy {
-        grid-column: 3/5;
-        justify-self: center;
+        &--btn,
+        &--options {
+            padding: 5px;
+            display: inline-block;
+            height: inherit;
+            width: 100%;
+        }
     }
 }
+
+.btn {
+    outline: none;
+    background-color: #b7b9b9;
+    border: 1px solid  #5f5d5d;
+    color: #2e2a2a;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #9c9999;
+}
+
+.btn:hover {
+    background-color: #cbcccc;
+  }
+  
+  .btn:active {
+    box-shadow: 1px 1px 1px #959595;
+  }
+  
+  .btn:disabled {
+    color: #e71717;
+    text-shadow: 1px 1px 1px #2b2a2a;
+  }
