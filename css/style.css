@@ -29,7 +29,9 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   line-height: 1;
 }
@@ -107,8 +109,6 @@ table {
 }
 
 .footer {
-  background-color: #0d455e;
-  color: azure;
   grid-area: ftr;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -134,57 +134,51 @@ table {
 }
 
 .grid {
-  background-color: #9c9999;
-  border: 5px double #959595;
+  background-color: #c8cbce;
+  border: 5px double #6b6767;
 }
 
 .grid__cell {
-  background-color: #cbcccc;
-  border: 5px double #7e7c7c;
-}
-
-.serial-comm {
-  height: 100%;
-  width: 100%;
-}
-
-.serial-comm__connection {
-  height: 100%;
-  width: 100%;
+  background-color: #dcdfe0;
+  border: 5px double #6b6767;
   padding: 5px;
+}
+
+.grid .serial-comm,
+.grid .method-param {
   display: grid;
-  grid-column-gap: 2px;
-  grid-row-gap: 2px;
-  grid-template-columns: 3fr 1fr;
-  justify-content: center;
-  align-items: center;
-}
-
-.serial-comm__connection--btn, .serial-comm__connection--options {
-  padding: 5px;
-  display: inline-block;
-  height: inherit;
-  width: 100%;
+  grid-template-columns: 5fr 3fr;
+  grid-column-gap: 3px;
 }
 
 .btn {
   outline: none;
-  background-color: #b7b9b9;
-  border: 1px solid  #5f5d5d;
-  color: #2e2a2a;
+  background-color: #a5a8a8;
+  color: #080808;
   font-weight: 600;
-  text-shadow: 1px 1px 1px #9c9999;
+  text-shadow: 1px 1px 1px #c8cbce;
+}
+
+.btn,
+.options {
+  border: 1px solid #6b6767;
 }
 
 .btn:hover {
-  background-color: #cbcccc;
+  background-color: #c8cbce;
 }
 
 .btn:active {
-  box-shadow: 1px 1px 1px #959595;
+  box-shadow: 1px 1px 1px #c8cbce;
 }
 
 .btn:disabled {
-  color: #e71717;
-  text-shadow: 1px 1px 1px #2b2a2a;
+  color: #d3340c;
+  text-shadow: 1px 1px 1px #0fa13b;
+}
+
+.footer {
+  background-color: #053a6b;
+  color: #dcdfe0;
+  padding: 0 10px;
 }

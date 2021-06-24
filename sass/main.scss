@@ -4,61 +4,55 @@
 @import "reset";
 @import "layout";
 
+
 .grid {
-    background-color:#9c9999;
-    border: 5px double #959595;
+    background-color: $grey-tertiary;
+    border: $border-width-primary double $grey-primary;
 
     &__cell {
-        background-color: #cbcccc;
-        border: 5px double #7e7c7c;
-
+        background-color: $white-primary;
+        border: $border-width-primary double $grey-primary;
+        padding: $padding-secondary;
     }
-}
 
-
-.serial-comm {
-    height: 100%;
-    width: 100%;
-    
-    &__connection {
-        height: 100%;
-        width: 100%;
-        padding: 5px;
+    .serial-comm,
+    .method-param {
         display: grid;
-        grid-column-gap: 2px;
-        grid-row-gap: 2px;
-        grid-template-columns: 3fr 1fr;
-        justify-content: center;
-        align-items: center;
-
-        &--btn,
-        &--options {
-            padding: 5px;
-            display: inline-block;
-            height: inherit;
-            width: 100%;
-        }
+        grid-template-columns: 5fr 3fr;
+        grid-column-gap: $border-width-secondary;
     }
 }
 
 .btn {
     outline: none;
-    background-color: #b7b9b9;
-    border: 1px solid  #5f5d5d;
-    color: #2e2a2a;
+    background-color: $grey-secondary;
+    color: $black-primary;
     font-weight: 600;
-    text-shadow: 1px 1px 1px #9c9999;
+    text-shadow: 1px 1px 1px $grey-tertiary;
+}
+
+.btn,
+.options {
+    border: $border-width-tertiary solid  $grey-primary;
+
 }
 
 .btn:hover {
-    background-color: #cbcccc;
+    background-color: $grey-tertiary;
   }
   
   .btn:active {
-    box-shadow: 1px 1px 1px #959595;
+    box-shadow: 1px 1px 1px $grey-tertiary;
   }
   
   .btn:disabled {
-    color: #e71717;
-    text-shadow: 1px 1px 1px #2b2a2a;
+    color: $red-primary;
+    text-shadow: 1px 1px 1px $green-primary;
   }
+
+
+.footer {
+    background-color: $blue-primary;
+    color: $white-primary;
+    padding: 0 $padding-primary;
+}
