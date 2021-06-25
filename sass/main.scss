@@ -4,16 +4,17 @@
 @import "reset";
 @import "layout";
 
-body {
-    font-size: 20px;
-}
 
 
 .grid {
-    font-size: 1em;
-    background-color: $grey-tertiary;
+    font-size: 2em;
+    background-color: $grey-secondary ;
     border: $border-width-secondary groove $grey-tertiary;
     border-radius: 5px;
+
+    @media only screen and (min-width: 1200px) {
+        font-size: 2.2em;
+    }
     
     &__cell {
         background-color: $white-primary;
@@ -26,7 +27,6 @@ body {
         display: grid;
         grid-template-columns: 5fr 3fr;
         grid-column-gap: $border-width-secondary;
-
     }
 
     .method-params {
@@ -43,7 +43,6 @@ body {
             grid-template-columns: 5fr 3fr;
             grid-template-rows: auto;
             grid-column-gap: $border-width-secondary;
-
         }
         
         &__btn {
@@ -114,5 +113,6 @@ body {
 .footer {
     background-color: $blue-primary;
     color: $white-primary;
+    font-size: 0.8em;
     padding: 0 $padding-primary;
 }

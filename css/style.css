@@ -29,6 +29,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 *,
 *::before,
 *::after {
@@ -68,7 +72,7 @@ table {
 @media only screen and (min-width: 992px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 50px repeat(4, 1fr) 50px;
+    grid-template-rows: 55px repeat(4, 1fr) 50px;
     grid-template-areas: "hcn flp flp dtl" "mar chr chr chr" "mar chr chr chr" "mar tfl tfl tfl" "mar mdt mdt mdt" "ftr ftr ftr ftr";
   }
 }
@@ -76,7 +80,7 @@ table {
 @media only screen and (min-width: 1200px) {
   .grid {
     grid-template-columns: 3fr 7fr 2fr;
-    grid-template-rows: 50px repeat(3, 1fr) 50px;
+    grid-template-rows: 60px repeat(3, 1fr) 50px;
     grid-template-areas: "hcn flp dtl" "mar chr mdt" "mar chr mdt" "mar tfl mdt" "ftr ftr ftr";
   }
 }
@@ -134,15 +138,17 @@ table {
   }
 }
 
-body {
-  font-size: 20px;
-}
-
 .grid {
-  font-size: 1em;
-  background-color: #c8cbce;
+  font-size: 2em;
+  background-color: #a5a8a8;
   border: 3px groove #c8cbce;
   border-radius: 5px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid {
+    font-size: 2.2em;
+  }
 }
 
 .grid__cell {
@@ -243,5 +249,6 @@ body {
 .footer {
   background-color: #053a6b;
   color: #dcdfe0;
+  font-size: 0.8em;
   padding: 0 10px;
 }
