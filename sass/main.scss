@@ -78,6 +78,7 @@ body {
 .label,
 .options {
     border: $border-width-tertiary solid  $grey-primary;
+    box-shadow: 1px 1px 1px $grey-secondary;
     border-radius: 3px;
     padding: $padding-secondary;
     text-shadow: 1px 1px $grey-tertiary;

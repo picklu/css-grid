@@ -205,6 +205,7 @@ body {
 .label,
 .options {
   border: 1px solid #6b6767;
+  box-shadow: 1px 1px 1px #a5a8a8;
   border-radius: 3px;
   padding: 5px;
   text-shadow: 1px 1px #c8cbce;
