@@ -4,14 +4,21 @@
 @import "reset";
 @import "layout";
 
+body {
+    font-size: 20px;
+}
+
 
 .grid {
+    font-size: 1em;
     background-color: $grey-tertiary;
     border: $border-width-secondary groove $grey-tertiary;
-
+    border-radius: 5px;
+    
     &__cell {
         background-color: $white-primary;
         border: $border-width-secondary groove $grey-tertiary;
+        border-radius: 5px;
         padding: $padding-secondary;
     }
 
@@ -19,6 +26,7 @@
         display: grid;
         grid-template-columns: 5fr 3fr;
         grid-column-gap: $border-width-secondary;
+
     }
 
     .method-params {
@@ -35,26 +43,34 @@
             grid-template-columns: 5fr 3fr;
             grid-template-rows: auto;
             grid-column-gap: $border-width-secondary;
-        }
 
+        }
+        
         &__btn {
             margin-top: auto;
-
+            
             .btn {
-                padding: $padding-primary;
+                padding: $padding-secondary;
                 width: 100%;
+                
+                @media only screen and (min-width: 992px) {
+                    padding: $padding-primary;
+                }
             }
         }
     }
 }
 
+.btn {
+    font-weight: 600;
+}
+
 .btn,
 .label {
-    outline: none;
-    background-color: $grey-secondary;
+    background-color: $grey-tertiary;
     color: $black-primary;
-    font-weight: 600;
-    text-shadow: 1px 1px 1px $grey-tertiary;
+    font-size: 0.8em;
+    outline: none;
 }
 
 .btn,
@@ -62,9 +78,14 @@
 .label,
 .options {
     border: $border-width-tertiary solid  $grey-primary;
+    border-radius: 3px;
     padding: $padding-secondary;
+    text-shadow: 1px 1px $grey-tertiary;
     width: 100%;
-
+    
+    &:hover {
+        box-shadow: 2px 2px 2px $grey-secondary;
+    }
 }
 
 .input {
@@ -76,7 +97,7 @@
 }
 
 .btn:hover {
-    background-color: $grey-tertiary;
+    background-color: $grey-secondary;
   }
   
   .btn:active {

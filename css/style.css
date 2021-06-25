@@ -134,14 +134,21 @@ table {
   }
 }
 
+body {
+  font-size: 20px;
+}
+
 .grid {
+  font-size: 1em;
   background-color: #c8cbce;
   border: 3px groove #c8cbce;
+  border-radius: 5px;
 }
 
 .grid__cell {
   background-color: #dcdfe0;
   border: 3px groove #c8cbce;
+  border-radius: 5px;
   padding: 5px;
 }
 
@@ -171,17 +178,26 @@ table {
 }
 
 .grid .method-params__btn .btn {
-  padding: 10px;
+  padding: 5px;
   width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .grid .method-params__btn .btn {
+    padding: 10px;
+  }
+}
+
+.btn {
+  font-weight: 600;
 }
 
 .btn,
 .label {
-  outline: none;
-  background-color: #a5a8a8;
+  background-color: #c8cbce;
   color: #080808;
-  font-weight: 600;
-  text-shadow: 1px 1px 1px #c8cbce;
+  font-size: 0.8em;
+  outline: none;
 }
 
 .btn,
@@ -189,8 +205,17 @@ table {
 .label,
 .options {
   border: 1px solid #6b6767;
+  border-radius: 3px;
   padding: 5px;
+  text-shadow: 1px 1px #c8cbce;
   width: 100%;
+}
+
+.btn:hover,
+.input:hover,
+.label:hover,
+.options:hover {
+  box-shadow: 2px 2px 2px #a5a8a8;
 }
 
 .input {
@@ -202,7 +227,7 @@ table {
 }
 
 .btn:hover {
-  background-color: #c8cbce;
+  background-color: #a5a8a8;
 }
 
 .btn:active {
