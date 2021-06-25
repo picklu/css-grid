@@ -17,7 +17,7 @@
 
         @media only screen and (min-width: 992px) {
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 50px repeat(4, 1fr) 50px;
+            grid-template-rows: 55px repeat(4, 1fr) 50px;
             grid-template-areas:
                 "hcn flp flp dtl"
                 "mar chr chr chr"
@@ -29,7 +29,7 @@
 
         @media only screen and (min-width: 1200px) {
             grid-template-columns: 3fr 7fr 2fr;
-            grid-template-rows: 50px repeat(3, 1fr) 50px;
+            grid-template-rows: 60px repeat(3, 1fr) 50px;
             grid-template-areas:
                 "hcn flp dtl"
                 "mar chr mdt"
