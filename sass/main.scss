@@ -6,7 +6,7 @@
 
 
 
-.grid {
+.main {
     font-size: 2em;
     background-color: $grey-secondary ;
     border: $border-width-secondary groove $grey-tertiary;
@@ -22,13 +22,13 @@
         border-radius: 5px;
         padding: $padding-secondary;
     }
-
+    
     .serial-comm {
         display: grid;
         grid-template-columns: 5fr 3fr;
         grid-column-gap: $border-width-secondary;
     }
-
+    
     .method-params {
         &__form{
             height: 100%;

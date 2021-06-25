@@ -138,7 +138,7 @@ table {
   }
 }
 
-.grid {
+.main {
   font-size: 2em;
   background-color: #a5a8a8;
   border: 3px groove #c8cbce;
@@ -146,32 +146,32 @@ table {
 }
 
 @media only screen and (min-width: 1200px) {
-  .grid {
+  .main {
     font-size: 2.2em;
   }
 }
 
-.grid__cell {
+.main__cell {
   background-color: #dcdfe0;
   border: 3px groove #c8cbce;
   border-radius: 5px;
   padding: 5px;
 }
 
-.grid .serial-comm {
+.main .serial-comm {
   display: grid;
   grid-template-columns: 5fr 3fr;
   grid-column-gap: 3px;
 }
 
-.grid .method-params__form {
+.main .method-params__form {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.grid .method-params__input {
+.main .method-params__input {
   margin-bottom: 5px;
   display: grid;
   grid-template-columns: 5fr 3fr;
@@ -179,17 +179,17 @@ table {
   grid-column-gap: 3px;
 }
 
-.grid .method-params__btn {
+.main .method-params__btn {
   margin-top: auto;
 }
 
-.grid .method-params__btn .btn {
+.main .method-params__btn .btn {
   padding: 5px;
   width: 100%;
 }
 
 @media only screen and (min-width: 992px) {
-  .grid .method-params__btn .btn {
+  .main .method-params__btn .btn {
     padding: 10px;
   }
 }

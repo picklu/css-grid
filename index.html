@@ -10,17 +10,17 @@
     </head>
 
     <body>
-        <div class="grid">
+        <div class="main grid">
             <!-- serial-comnmunication -->
-            <div class=" grid__cell serial-comm">
+            <div class="main__cell serial-comm">
                 <button id="connect" class="btn serial-comm__connect disconnected">Connect</button>
                 <select name="ports" class="options serial-comm__ports" id="ports">
                     <option>COMX</option><!-- dummy port -->
                 </select>
             </div>
-            <div class="grid__cell file-path">File Path</div>
-            <div class="grid__cell data-load">Data Loader</div>
-            <div class="grid__cell method-params">
+            <div class="main__cell file-path">File Path</div>
+            <div class="main__cell data-load">Data Loader</div>
+            <div class="main__cell method-params">
                 <form class="method-params__form" id="params" method="GET" action="#">
 
                     <div class="method-params__input active">
@@ -89,9 +89,11 @@
 
                 </form>
             </div>
-            <div class="grid__cell chart-window">Chart</div>
-            <div class="grid__cell meta-data">Meta Data</div>
-            <div class="grid__cell temporary-files">Temporary Files</div>
+            <div class="main__cell chart-window">
+                Chart
+            </div>
+            <div class="main__cell meta-data">Meta Data</div>
+            <div class="main__cell temporary-files">Temporary Files</div>
 
             <footer class="footer">
                 <div class="status">Status: <span class="status-message"></span></div>
