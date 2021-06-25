@@ -62,13 +62,13 @@ table {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 50px repeat(8, 1fr) 50px;
-  grid-template-areas: "hcn dtl flp flp" "chr chr chr chr" "chr chr chr chr" "chr chr chr chr" "chr chr chr chr" "mar mar mar mar" "mar mar mar mar" "mdt mdt mdt mdt" "tfe tfe tfe tfe" "ftr ftr ftr ftr";
+  grid-template-areas: "hcn dtl flp flp" "chr chr chr chr" "chr chr chr chr" "chr chr chr chr" "chr chr chr chr" "mar mar mar mar" "mar mar mar mar" "mdt mdt mdt mdt" "tfl tfl tfl tfl" "ftr ftr ftr ftr";
 }
 
 @media only screen and (min-width: 992px) {
   .grid {
     grid-template-rows: 50px repeat(7, 1fr) 50px;
-    grid-template-areas: "hcn flp flp dtl" "mar chr chr chr" "mar chr chr chr" "mar chr chr chr" "mar tfe tfe tfe" "mar tfe tfe tfe" "mar mdt mdt mdt" "mar mdt mdt mdt" "ftr ftr ftr ftr";
+    grid-template-areas: "hcn flp flp dtl" "mar chr chr chr" "mar chr chr chr" "mar chr chr chr" "mar tfl tfl tfl" "mar tfl tfl tfl" "mar mdt mdt mdt" "mar mdt mdt mdt" "ftr ftr ftr ftr";
   }
 }
 
@@ -76,7 +76,7 @@ table {
   .grid {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 50px repeat(3, 1fr) 50px;
-    grid-template-areas: "hcn flp flp flp flp dtl" "mar chr chr chr chr mdt" "mar chr chr chr chr mdt" "mar tfe tfe tfe tfe mdt" "ftr ftr ftr ftr ftr ftr";
+    grid-template-areas: "hcn flp flp flp flp dtl" "mar chr chr chr chr mdt" "mar chr chr chr chr mdt" "mar tfl tfl tfl tfl mdt" "ftr ftr ftr ftr ftr ftr";
   }
 }
 
@@ -92,7 +92,7 @@ table {
   grid-area: dtl;
 }
 
-.method-param {
+.method-params {
   grid-area: mar;
 }
 
@@ -104,8 +104,8 @@ table {
   grid-area: mdt;
 }
 
-.temporary-file {
-  grid-area: tfe;
+.temporary-files {
+  grid-area: tfl;
 }
 
 .footer {
@@ -150,10 +150,28 @@ table {
   grid-column-gap: 3px;
 }
 
-.grid .method-param .params_form {
+.grid .method-params__form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid .method-params__input {
+  margin-bottom: 5px;
   display: grid;
   grid-template-columns: 5fr 3fr;
   grid-template-rows: auto;
+  grid-column-gap: 3px;
+}
+
+.grid .method-params__btn {
+  margin-top: auto;
+}
+
+.grid .method-params__btn .btn {
+  height: 50px;
+  width: 100%;
 }
 
 .btn,
@@ -166,8 +184,11 @@ table {
 }
 
 .btn,
+.input,
+.label,
 .options {
   border: 1px solid #6b6767;
+  padding: 5px;
 }
 
 .btn:hover {

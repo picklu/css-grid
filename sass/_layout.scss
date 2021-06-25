@@ -16,7 +16,7 @@
         "mar mar mar mar"
         "mar mar mar mar"
         "mdt mdt mdt mdt"
-        "tfe tfe tfe tfe"
+        "tfl tfl tfl tfl"
         "ftr ftr ftr ftr";
 
         @media only screen and (min-width: 992px) {
@@ -27,8 +27,8 @@
                 "mar chr chr chr"
                 "mar chr chr chr"
                 "mar chr chr chr"
-                "mar tfe tfe tfe"
-                "mar tfe tfe tfe"
+                "mar tfl tfl tfl"
+                "mar tfl tfl tfl"
                 "mar mdt mdt mdt"
                 "mar mdt mdt mdt"
                 "ftr ftr ftr ftr";
@@ -41,7 +41,7 @@
                 "hcn flp flp flp flp dtl"
                 "mar chr chr chr chr mdt"
                 "mar chr chr chr chr mdt"
-                "mar tfe tfe tfe tfe mdt"
+                "mar tfl tfl tfl tfl mdt"
                 "ftr ftr ftr ftr ftr ftr";
         }
         
@@ -59,7 +59,7 @@
     grid-area: dtl;
 }
 
-.method-param {
+.method-params {
     grid-area: mar;
 }
 
@@ -71,8 +71,8 @@
     grid-area: mdt;
 }
 
-.temporary-file {
-    grid-area: tfe;
+.temporary-files {
+    grid-area: tfl;
 }
 
 
