@@ -61,22 +61,23 @@ table {
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px repeat(8, 1fr) 50px;
-  grid-template-areas: "hcn dtl flp flp" "chr chr chr chr" "chr chr chr chr" "chr chr chr chr" "chr chr chr chr" "mar mar mar mar" "mar mar mar mar" "mdt mdt mdt mdt" "tfl tfl tfl tfl" "ftr ftr ftr ftr";
+  grid-template-rows: 50px repeat(4, 1fr) 50px;
+  grid-template-areas: "hcn dtl flp flp" "chr chr chr chr" "chr chr chr chr" "mar mar mdt mdt" "tfl tfl tfl tfl" "ftr ftr ftr ftr";
 }
 
 @media only screen and (min-width: 992px) {
   .grid {
-    grid-template-rows: 50px repeat(7, 1fr) 50px;
-    grid-template-areas: "hcn flp flp dtl" "mar chr chr chr" "mar chr chr chr" "mar chr chr chr" "mar tfl tfl tfl" "mar tfl tfl tfl" "mar mdt mdt mdt" "mar mdt mdt mdt" "ftr ftr ftr ftr";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px repeat(4, 1fr) 50px;
+    grid-template-areas: "hcn flp flp dtl" "mar chr chr chr" "mar chr chr chr" "mar tfl tfl tfl" "mar mdt mdt mdt" "ftr ftr ftr ftr";
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 3fr 7fr 2fr;
     grid-template-rows: 50px repeat(3, 1fr) 50px;
-    grid-template-areas: "hcn flp flp flp flp dtl" "mar chr chr chr chr mdt" "mar chr chr chr chr mdt" "mar tfl tfl tfl tfl mdt" "ftr ftr ftr ftr ftr ftr";
+    grid-template-areas: "hcn flp dtl" "mar chr mdt" "mar chr mdt" "mar tfl mdt" "ftr ftr ftr";
   }
 }
 
@@ -135,12 +136,12 @@ table {
 
 .grid {
   background-color: #c8cbce;
-  border: 5px double #6b6767;
+  border: 3px groove #c8cbce;
 }
 
 .grid__cell {
   background-color: #dcdfe0;
-  border: 5px double #6b6767;
+  border: 3px groove #c8cbce;
   padding: 5px;
 }
 
@@ -170,7 +171,7 @@ table {
 }
 
 .grid .method-params__btn .btn {
-  height: 50px;
+  padding: 10px;
   width: 100%;
 }
 
@@ -189,6 +190,15 @@ table {
 .options {
   border: 1px solid #6b6767;
   padding: 5px;
+  width: 100%;
+}
+
+.input {
+  text-align: center;
+}
+
+.options {
+  text-align-last: center;
 }
 
 .btn:hover {

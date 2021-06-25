@@ -7,11 +7,11 @@
 
 .grid {
     background-color: $grey-tertiary;
-    border: $border-width-primary double $grey-primary;
+    border: $border-width-secondary groove $grey-tertiary;
 
     &__cell {
         background-color: $white-primary;
-        border: $border-width-primary double $grey-primary;
+        border: $border-width-secondary groove $grey-tertiary;
         padding: $padding-secondary;
     }
 
@@ -41,7 +41,7 @@
             margin-top: auto;
 
             .btn {
-                height: 50px;
+                padding: $padding-primary;
                 width: 100%;
             }
         }
@@ -63,7 +63,16 @@
 .options {
     border: $border-width-tertiary solid  $grey-primary;
     padding: $padding-secondary;
+    width: 100%;
 
+}
+
+.input {
+    text-align: center;
+}
+
+.options {
+    text-align-last: center;
 }
 
 .btn:hover {
