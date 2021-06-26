@@ -175,7 +175,6 @@ table {
   margin-bottom: 5px;
   display: grid;
   grid-template-columns: 5fr 3fr;
-  grid-template-rows: auto;
   grid-column-gap: 3px;
 }
 
@@ -251,4 +250,39 @@ table {
   color: #dcdfe0;
   font-size: 0.8em;
   padding: 0 10px;
+}
+
+.chart {
+  margin: 0 auto;
+}
+
+/* style for d3js chart */
+.axis, .axis-title {
+  font-family: sans-serif;
+}
+
+.axis {
+  font-size: 12px;
+}
+
+.axis-title {
+  font-size: 16px;
+}
+
+.line {
+  fill: none;
+  stroke: #0b7e1e;
+  stroke-width: 2px;
+}
+
+circle.pointer {
+  fill: none;
+  stroke: #ec1a2b;
+  stroke-width: 2px;
+}
+
+.grid line {
+  stroke: #677272;
+  stroke-width: 1px;
+  opacity: 0.5;
 }
